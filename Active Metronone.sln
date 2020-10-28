@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Active_Metronone", "Active Metronone\Active_Metronone\Active_Metronone.csproj", "{7C2CB8DD-6F09-4284-BFC6-2C6A103391AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Active_Metronone.Tizen.Mobile", "Active Metronone\Active_Metronone.Tizen.Mobile\Active_Metronone.Tizen.Mobile.csproj", "{D8A90393-5A4E-4096-B8EC-BB8889BFA8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Active_Metronone.Tizen.Wearable", "Active Metronone\Active_Metronone.Tizen.Wearable\Active_Metronone.Tizen.Wearable.csproj", "{83776054-9833-4E00-9248-3CCBE364F004}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2CB8DD-6F09-4284-BFC6-2C6A103391AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2CB8DD-6F09-4284-BFC6-2C6A103391AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2CB8DD-6F09-4284-BFC6-2C6A103391AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2CB8DD-6F09-4284-BFC6-2C6A103391AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A90393-5A4E-4096-B8EC-BB8889BFA8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A90393-5A4E-4096-B8EC-BB8889BFA8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A90393-5A4E-4096-B8EC-BB8889BFA8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A90393-5A4E-4096-B8EC-BB8889BFA8DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83776054-9833-4E00-9248-3CCBE364F004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83776054-9833-4E00-9248-3CCBE364F004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83776054-9833-4E00-9248-3CCBE364F004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83776054-9833-4E00-9248-3CCBE364F004}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {841EE6E1-0706-40B5-947A-51AF280A4BAE}
+	EndGlobalSection
+EndGlobal
