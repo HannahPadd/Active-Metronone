@@ -19,6 +19,7 @@ namespace Active_Metronone
 
         public App()
         {
+            //The buttons get created here
             addbpmButton = new Button
             {
                 Text = "+",
@@ -60,7 +61,7 @@ namespace Active_Metronone
 
 
 
-            // The root page of your application
+            // The root page of the application (this application only has 1 page)
             MainPage = new ContentPage
             {
                 Content = new StackLayout
@@ -77,6 +78,7 @@ namespace Active_Metronone
             };
         }
 
+        //Method that gets called when someone presses on a button
         void OnButtonClicked(object s, EventArgs e)
         {
             if (s == addbpmButton)

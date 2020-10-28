@@ -21,6 +21,7 @@ namespace Active_Metronone {
             this.bpm = BPM;
         }
 
+        //Function in which the metronome runs
          public void Start(int bpm)
          {
             bool res = feedback.IsSupportedPattern(FeedbackType.Vibration, "Message");
@@ -32,6 +33,7 @@ namespace Active_Metronone {
             }
         }
 
+        //Function which counts for the metronome
         public async void WaitTime(int timeInterval)
         {
             await Task.Delay(timeInterval);
