@@ -13,32 +13,49 @@ namespace Active_Metronone {
         int bpm;
         public bool isActive = false;
         public Feedback feedback = new Feedback();
-        App app = new App();
-    
+        Thread thread;
 
         public Metronome(int BPM)
         {
             this.bpm = BPM;
+            thread = new Thread(this.Run);
         }
+        
+        public void Start()
+        {
+            if (!isActive)
+            {
+                isActive = true;
+                thread.Start();
+            }
+        }
+        
 
         //Function in which the metronome runs
-         public void Start(int bpm)
-         {
-            bool res = feedback.IsSupportedPattern(FeedbackType.Vibration, "Message");
-            int timeInterval = 60000 / bpm;
-            isActive = true;
+        public void Run()
+        {
+            //bool res = feedback.IsSupportedPattern(FeedbackType.Vibration, "Message");
 
-            while (isActive && res) {
-                WaitTime(timeInterval);
+            while (isActive) {
+                int timeInterval = 60000 / bpm;
+
+                //Wait for next tick
+                Thread.Sleep(timeInterval);
+
+                //Tick
+                feedback.Play(FeedbackType.Sound, "Tap");
+                //feedback.Stop();
             }
         }
 
-        //Function which counts for the metronome
-        public async void WaitTime(int timeInterval)
+        public void Stop()
         {
-            await Task.Delay(timeInterval);
-            feedback.Play(FeedbackType.Sound, "Tap");
-            feedback.Stop();
+            isActive = false;
+        }
+
+        public void setBpm(int bpm)
+        {
+            this.bpm = bpm;
         }
 
     }

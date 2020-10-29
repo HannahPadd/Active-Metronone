@@ -19,6 +19,8 @@ namespace Active_Metronone
 
         public App()
         {
+            metronome = new Metronome(currentBpm);
+
             //The buttons get created here
             addbpmButton = new Button
             {
@@ -52,6 +54,7 @@ namespace Active_Metronone
                 BackgroundColor = Color.Black,
                 HorizontalOptions = LayoutOptions.Center,
             };
+            stop.Clicked += OnButtonClicked;
 
             bpmCount = new Label
             {
@@ -86,24 +89,26 @@ namespace Active_Metronone
                 currentBpm += 1;
                 bpmCount.Text = String.Format($"Current bpm {currentBpm}", bpmCount);
 
+                metronome.setBpm(currentBpm);
+
             }
 
             if (s == decreasebpmButton)
             {
                 currentBpm -= 1;
                 bpmCount.Text = String.Format($"Current bpm {currentBpm}", bpmCount);
+
+                metronome.setBpm(currentBpm);
             }
 
             if (s == startCount)
             {
-                metronome = new Metronome(currentBpm);
-                metronome.Start(currentBpm);
+                metronome.Start();
             }
 
             if (s == stop)
             {
-                metronome.feedback.Stop();
-                metronome.isActive = false;
+                metronome.Stop();
             }
         }
         protected override void OnStart()
