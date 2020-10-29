@@ -43,7 +43,9 @@ namespace Active_Metronone {
                 Thread.Sleep(timeInterval);
 
                 //Tick
-                feedback.Play(FeedbackType.Sound, "Tap");
+                feedback.Play(FeedbackType.Sound, "SilentModeDisabled"); 
+                feedback.Play(FeedbackType.Vibration, "VibrationModeAbled");
+
                 //feedback.Stop();
             }
         }
